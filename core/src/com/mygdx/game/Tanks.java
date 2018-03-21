@@ -21,11 +21,14 @@ import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextArea;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.kotcrab.vis.ui.widget.tabbedpane.Tab;
 
 import javax.xml.soap.Text;
 
@@ -47,22 +50,35 @@ public class Tanks extends ApplicationAdapter {
 
 	public void dibujarMain()
 	{
-		TextButton boton = new TextButton("boton 1", getSkin());
-
-		TextButton boton2 = new TextButton("boton 2", skin);
+		TextButton play = new TextButton("play", getSkin());
+		TextButton opciones = new TextButton("options", getSkin());
+		TextButton usuarios = new TextButton("users", getSkin());
+		TextArea texto = new TextArea("TANKS", getSkin());
+		
+		Table subtabla = new Table(getSkin());
+		
 		int h = Gdx.graphics.getHeight();
 		int w = Gdx.graphics.getWidth();
 
+		play.pad(5,45,5,45);
+		opciones.pad(5,45,5,45);
+		usuarios.pad(5,45,5,45);
+		texto.setHeight(200);
+		texto.setWidth(600);
+		
 		stage = new Stage();
 		table = new Table(getSkin());
 
-		table.setPosition(w / 2, h / 2 - 80);
+		table.setPosition(w / 2, h / 2 - 140);
+		subtabla.setPosition(w/2, h/2+100);
 		stage.addActor(table);
+		stage.addActor(subtabla);
 
-
-		table.add(boton);
+		subtabla.add(texto);
 		table.row();
-		table.add(boton2).space(50,0,0,0);
+		table.add(play);
+		table.add(opciones).spaceLeft(20);
+		table.add(usuarios).spaceLeft(20);
 	}
 	
 	@Override
