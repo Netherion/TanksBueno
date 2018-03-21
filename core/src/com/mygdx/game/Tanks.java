@@ -60,11 +60,6 @@ public class Tanks extends ApplicationAdapter {
 		stage.addActor(table);
 
 
-		Table tabla2 = new Table(getSkin());
-
-		tabla2.setPosition(w/2, h - 20);
-
-
 		table.add(boton);
 		table.row();
 		table.add(boton2).space(50,0,0,0);
