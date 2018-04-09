@@ -22,7 +22,6 @@ public class Pausa
         return skin;
     }
     
-    
     public void create()
     {
         tabla = new Table(getSkin());
