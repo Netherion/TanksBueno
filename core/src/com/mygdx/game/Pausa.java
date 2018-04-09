@@ -27,16 +27,6 @@ public class Pausa
     {
         tabla = new Table(getSkin());
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
     
