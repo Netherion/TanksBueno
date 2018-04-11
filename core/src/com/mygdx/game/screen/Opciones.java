@@ -1,11 +1,11 @@
-package com.mygdx.game;
+package com.mygdx.game.screen;
 
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
-public class Juego
+public class Opciones
 {
     public Skin getSkin()
     {
